@@ -1,0 +1,333 @@
+/* main: ../bulmascores.sass */
+html,
+body {
+  height: 100%;
+}
+
+$sizes: (0, 10, 15, 20, 25, 30, 50);
+$positions: ("top", "left", "bottom", "right");
+
+.content-is-vcentered {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+
+.justify-right {
+  justify-content: right;
+}
+.justify-center {
+  justify-content: center;
+}
+nav {
+  box-shadow: none !important;
+  background: white !important;
+}
+
+.custom-logo-link.navbar-item {
+  justify-content: center !important;
+  display: inline-block !important;
+}
+
+//CTA
+.header_cta {
+  margin: 1.7em 0;
+}
+
+.cta {
+  border: 3px solid #000;
+  height: 48px;
+  line-height: 46px;
+  font-size: 1em;
+  padding: 0 10px;
+  margin: 0 10px;
+  border-radius: 26px;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  line-break: strict;
+  white-space: nowrap;
+  font-weight: 700;
+  transition: all ease-in 0.3s;
+}
+a.is-green-light {
+  &:link,
+  &:visited,
+  &:active {
+    border-color: #a1cbb5;
+    color: #a1cbb5;
+  }
+  &:hover {
+    opacity: 1;
+    background: #a1cbb5;
+    color: #fff;
+  }
+}
+a.is-green {
+  &:link,
+  &:visited,
+  &:active {
+    border-color: #a1cbb5;
+    background: #a1cbb5;
+    color: #fff;
+  }
+  &:hover {
+    opacity: 1;
+    background: #6d897a;
+    border-color: #6d897a;
+    color: #fff;
+  }
+}
+// sections
+#home_header {
+  background: url("../images/bg/milkbath.jpg");
+  background-position: center bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 500px;
+}
+.header_menu {
+  align-self: center;
+  font-family: "Sacramento", cursive;
+  line-height: 160px;
+  font-size: 1.8em;
+  span {
+    margin-left: 10px;
+  }
+}
+.header_search {
+  font-family: "Sacramento", cursive;
+  font-size: 1.8em;
+  margin-right: 10px;
+}
+
+.home_search_wrapper {
+  width: 0px;
+  opacity: 0;
+  transition: all ease-in 0.3s;
+  .home_search_input {
+    width: 0px;
+    height: 32px;
+    border-radius: 16px;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: none;
+    margin-left: 10px;
+    padding: 0 16px;
+    &.open {
+      width: 150px;
+      border-color: #000;
+    }
+  }
+  &.open {
+    width: 150px;
+    opacity: 1;
+  }
+}
+.header_content {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  min-height: 100%;
+}
+
+.header-flex {
+  display: flex;
+  flex: 1;
+}
+.header_text {
+  width: 50%;
+}
+
+.header_quote {
+  font-family: "Josefin Sans", sans-serif;
+  color: #a0cbb5;
+  font-size: 3em;
+  width: 70%;
+  line-height: 1.2em;
+}
+.header_cta {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+}
+.header_bubble {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+#bubbles-js {
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header-wrapper {
+  height: 100px;
+}
+#home_quote {
+  background: #a1cbb5;
+  font-family: "Amatic SC", cursive;
+  text-align: center;
+  font-size: 4em;
+  color: #f6f6f6;
+}
+
+#home_quote_top {
+  margin-top: -200px;
+  height: 220px;
+  background-image: url("../images/layout/waves.svg");
+  background-size: cover;
+  background-position: bottom;
+}
+#home_quote_bottom {
+  height: 220px;
+  background-image: url("../images/layout/waves.svg");
+  background-size: cover;
+  background-position: top;
+  transform: rotate(180deg);
+  background-color: #e8f9fd;
+}
+
+#home_products {
+  background: #e8f9fd;
+  color: #687f8a;
+  padding-bottom: 50px;
+  p {
+    font-family: "Josefin Sans", sans-serif;
+    width: 80%;
+  }
+}
+.home_products_title {
+  font-family: "Amatic SC", cursive;
+  font-size: 3.5em;
+  font-weight: normal;
+  color: #687f8a;
+}
+
+#home_labels {
+  background: #f7ecd6;
+  padding: 20px 0;
+  h2 {
+    font-family: "Amatic SC", cursive;
+    color: #a9a18f;
+    font-size: 2.5em;
+    margin: 0 0 1em;
+  }
+}
+
+#home_stats {
+  h2 {
+    font-family: "Amatic SC", cursive;
+    color: #a9a18f;
+    font-size: 2.5em;
+  }
+}
+
+.home_stats_container {
+  position: relative;
+  border: 3px solid #c5bdab;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  color: #a9a18f;
+  font-size: 1.2em;
+  margin: auto;
+}
+.home_stats_text {
+  width: 100px;
+  max-width: 100px;
+  font-family: "Josefin Sans", sans-serif;
+  margin: 20px auto 0;
+  line-height: 1em;
+}
+.home_stats_input {
+  position: absolute;
+  top: 50%;
+}
+
+.label-link {
+  img {
+    max-height: 150px;
+  }
+}
+
+#home_stats {
+  background: #f7ecd6;
+  text-align: center;
+  padding-bottom: 3em;
+}
+
+#home_reviews {
+  background: #f7ecd6;
+  padding-bottom: 50px;
+  .carousel-cell {
+    width: 100%;
+    text-align: center;
+    .review_text,
+    .review_author {
+      width: 80%;
+
+      margin: auto;
+    }
+    .review_author {
+      text-align: right;
+    }
+  }
+  h2 {
+    font-family: "Amatic SC", cursive;
+    color: #a9a18f;
+    font-size: 2.5em;
+    margin: 0 0 1em;
+  }
+}
+
+.home_modal {
+  display: none;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 31;
+  overflow: hidden;
+  background: #fff;
+  opacity: 0;
+  transition: all ease-in 0.3s;
+}
+.admin-bar .home_modal {
+  top: 32px;
+}
+.home_modal.open {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+}
+.home_modal_footer,
+.home_modal_header {
+  height: 100px;
+}
+
+.modal_btn {
+  cursor: pointer;
+}
+// WP Store Locator
+
+.wpsl-input label,
+#wpsl-radius label,
+#wpsl-category label {
+  width: auto !important;
+}
+
+.wpsl-search {
+  background: #fff;
+}
+
+footer {
+}
